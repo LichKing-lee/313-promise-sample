@@ -1,0 +1,20 @@
+{
+  "name": "313-promise-sample",
+  "homepage": "https://github.com/LichKing-lee/313-promise-sample",
+  "authors": [
+    "LeeChangYong <lcy9002@naver.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "qunit": "^2.0.1"
+  }
+}
