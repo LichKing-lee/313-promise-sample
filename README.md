@@ -43,39 +43,39 @@ setTimeout(function(){
 }, 1000);
 
 ###Promise
-* 자바스크립트의 비동기처리를 위해 등장
+* 자바스크립트의 비동기처리를 위해 등장  
 * 조금만 기다려달라 내가 줄것이 있다. 라고 약속하고 믿음을 가져야하기때문에 promise 라고 명명했다고함.(근거는 없음)
 
-var promise = new Promise(function(resolve, reject){
-    setTimeout(function(){
-        alert("hello first");
-        resolve();
-    }, 1000);
-});
+var promise = new Promise(function(resolve, reject){  
+    setTimeout(function(){  
+        alert("hello first");  
+        resolve();  
+    }, 1000);  
+});  
 
-promise.then(function(resolve, reject){
-    setTimeout(function(){
-        alert("hello second");
-        resolve();
-    }, 1000);
-});
+promise.then(function(resolve, reject){  
+    setTimeout(function(){  
+        alert("hello second");  
+        resolve();  
+    }, 1000);  
+});  
 
-* 비동기 실행결과를 resolve(), reject() 함수로 성공/실패 여부를 판단  
+* 비동기 실행결과를 resolve(), reject() 함수로 성공/실패 여부를 판단    
 * promise 객체의 then() 함수를 통해 성공/실패 시 실행할 콜백함수 전달  
 * 계속 depth를 깊이 들어가며 작성해야하는 콜백구조에 비해 순차적으로 작성하기때문에 가독성에서 월등히 좋음  
 * angularjs의 $http가 반환하는 promise 객체가 제공하던 success(), error() 함수는 angularjs에서 추가한 필드  
 * 실패시 실행할 함수는 catch() 라는 래퍼 함수를 제공하고있으며 then(null, function(){}) 으로 작성해도되지만 가독성 측면에서 catch() 함수 사용 권장  
 
-var promise = new Promise(function(resolve, reject){
-    setTimeout(function(){
-        alert("hello first");
-        reject();
-    }, 1000);
-});
+var promise = new Promise(function(resolve, reject){  
+    setTimeout(function(){  
+        alert("hello first");  
+        reject();  
+    }, 1000);  
+});  
 
-promise.catch(function(){
-    alert("error!!!");
-});
+promise.catch(function(){  
+    alert("error!!!");  
+});  
 
 * 다중 프로미스 실행
 Promise.all([promise object, promise object]).then(success, error);
