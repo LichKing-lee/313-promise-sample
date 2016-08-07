@@ -29,18 +29,18 @@ exposureThis.call(new Date);  // Object object
 * 함수가 자유로운 자바스크립트에서 비동기처리에 필수적    
 * 비동기뿐만아니라 라이브러리 등 자바스크립트 코드내에서 매우 흔히 볼 수 있음  
 
-setTimeout(function(){
-    alert("hello first");
-}, 1000);
+setTimeout(function(){  
+    alert("hello first");  
+}, 1000);  
 
-* jquery만 있으면 모든게 다 되던시절엔 그냥 좀 불편한 수준이었으나 nodejs등의 등장으로 자바스크립트의 인기가 폭발적으로 증가하면서 콜백이 오남용되는 현상이 생김  
+* jquery만 있으면 모든게 다 되던시절엔 그냥 좀 불편한 수준이었으나 nodejs등의 등장으로 자바스크립트의 인기가 폭발적으로 증가하면서 콜백이 오남용되는 현상이 생김    
 
-setTimeout(function(){
-    alert("hello first");
-    setTimeout(function(){
-        alert("hello second");
-    }, 1000);
-}, 1000);
+setTimeout(function(){  
+    alert("hello first");  
+    setTimeout(function(){  
+        alert("hello second");  
+    }, 1000);  
+}, 1000);  
 
 ###Promise
 * 자바스크립트의 비동기처리를 위해 등장  
